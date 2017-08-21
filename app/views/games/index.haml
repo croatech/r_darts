@@ -1,0 +1,14 @@
+.row.new-game
+  .form-inline
+    = form_for :game, url: { action: 'create' }, method: :post do |f|
+      = f.text_field :score, type: 'integer', class: 'form-control', placeholder: 'Score'
+      = f.submit 'Start game', class: 'btn btn-success'
+
+.row.games
+  - if @games.present?
+    %table.table.table-striped
+      - @games.each do |game|
+        %tr
+          %td= game.id
+  - else
+    %h2 No games

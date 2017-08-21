@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'haml'
 gem 'dry-validation'
+gem 'dry-transaction'
 gem 'interactor'
 gem 'bootstrap-sass'
 
