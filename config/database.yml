@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  host: <%= ENV['DARTS_DB_HOST']         || 'localhost' %>
+  port: <%= ENV['DARTS_DB_PORT']         || '5432' %>
+  username: <%= ENV['DARTS_DB_USERNAME'] || 'vitaliy' %>
+  password: <%= ENV['DARTS_DB_PASSWORD'] %>
+
+production:
+  <<: *default
+  host: <%= ENV['POSTGRES_PORT_5432_TCP_ADDR'] %>
+  port: <%= ENV['POSTGRES_PORT_5432_TCP_PORT'] %>
+  database: darts_production
+
+development:
+  <<: *default
+  host: localhost
+  database: darts_development
+
+test:
+  <<: *default
+  host: localhost
+  database: darts_test
