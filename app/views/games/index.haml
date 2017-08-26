@@ -9,6 +9,10 @@
     %table.table.table-striped
       - @games.each do |game|
         %tr
+          %td ID
+          %td Winner
+        %tr
           %td= game.id
+          %td= game.winner.name
   - else
     %h2 No games

@@ -1,2 +1,30 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+- if @winner.present?
+  %h2.center= "Congratulations, #{@winner.name}. You won."
+  = link_to 'Back to games list', games_path, class: 'btn btn-info'
+
+- else
+  .row.rounds
+    - @user_rounds.each do |user, rounds|
+      .col-md-6
+        %table.table
+          %tr
+            %td User
+            %td Score
+          - rounds.each do |round|
+            %tr
+              %td= user.name
+              %td= round.score
+
+
+  .row.get-shot
+    %h3= "#{@current_player.name}'s shot"
+    %h4
+      You need to get
+      = @current_round.current_user_score
+      points
+
+    .row.shot
+    .form-inline
+      = form_tag round_path(id: @current_round.id), method: :patch do
+        = number_field_tag :score, nil, type: 'integer', class: 'form-control', placeholder: 'Score'
+        = submit_tag 'Shot', class: 'btn btn-success'

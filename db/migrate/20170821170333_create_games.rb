@@ -3,7 +3,7 @@ class CreateGames < ActiveRecord::Migration[5.1]
     create_table :games do |t|
       t.integer :score, null: false
       t.integer :winner_id
-      t.string :status, null: false
+      t.integer :status, null: false, default: 0
 
       t.timestamps
     end

@@ -6,7 +6,7 @@ class Games::CreateService
   step :persist
 
   def init(input)
-    @params = input[:params].merge(status: 'active')
+    @params = input[:params]
     @object = Game.new(params)
 
     Right(nil)
@@ -26,6 +26,7 @@ class Games::CreateService
       object.save
       object.game_users.create(user: User.first)
       object.game_users.create(user: User.second)
+      create_first_round
     end
 
     Right(object)
@@ -34,4 +35,9 @@ class Games::CreateService
   private
 
   attr_reader :params, :object
+
+  def create_first_round
+    user_id = object.users.ids.sample
+    object.rounds.create(user_id: user_id)
+  end
 end

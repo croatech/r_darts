@@ -140,6 +140,9 @@
     <orderEntry type="library" scope="PROVIDED" name="dry-core (v0.3.1, RVM: ruby-2.3.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dry-equalizer (v0.2.0, RVM: ruby-2.3.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dry-logic (v0.4.1, RVM: ruby-2.3.4) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dry-matcher (v0.6.0, RVM: ruby-2.3.4) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dry-monads (v0.3.1, RVM: ruby-2.3.4) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="dry-transaction (v0.10.2, RVM: ruby-2.3.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="dry-validation (v0.11.0, RVM: ruby-2.3.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.6.1, RVM: ruby-2.3.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, RVM: ruby-2.3.4) [gem]" level="application" />
@@ -186,6 +189,7 @@
     <orderEntry type="library" scope="PROVIDED" name="web-console (v3.5.1, RVM: ruby-2.3.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-driver (v0.6.5, RVM: ruby-2.3.4) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="websocket-extensions (v0.1.2, RVM: ruby-2.3.4) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="wisper (v2.0.0, RVM: ruby-2.3.4) [gem]" level="application" />
   </component>
   <component name="RModuleSettingsStorage">
     <LOAD_PATH number="0" />
